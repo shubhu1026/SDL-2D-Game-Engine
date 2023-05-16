@@ -18,14 +18,14 @@ public:
 	void RunLoop();
 
 	//Add and Remove Game Actors
-	void AddActor(Actor* actor);
-	void RemoveActor(Actor* actor);
+	void AddActor(class Actor* actor);
+	void RemoveActor(class Actor* actor);
 
 	SDL_Texture* GetTexture(const std::string& fileName);
 
 	//Handle Image Loading
 	//SDL_Texture* LoadTexture(const char* fileName);
-	void AddSprite(SpriteComponent* sprite);
+	void AddSprite(class SpriteComponent* sprite);
 	void RemoveSprite(class SpriteComponent* sprite);
 
 	// Shutdown the game
@@ -61,8 +61,6 @@ private:
 
 	//All the sprite components drawn
 	std::vector<class SpriteComponent*> mSprites;
-	
-	bool mUpdatingActors;
 
 	// Game should continue to run
 	bool mIsRunning;
